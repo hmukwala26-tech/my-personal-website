@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Haggai Mukwala - Personal Website</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <p>My name is Haggai Mukwala, and I am a Computer Science student.</p>
+        <p>Student ID: 202406300</p>
+        <button id="theme-toggle" type="button" aria-pressed="false">Switch to dark theme</button>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#learning">Learning Plan</a>
+        <a href="#projects">Projects</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+        <a href="#resources">Resources</a>
+    </nav>
+
+    <main>
+
+        <section id="intro" class="content-section hero">
+            <h2>Hello, I'm Haggai</h2>
+            <p>
+                Second year Computer Science student at Mulungushi University,
+                learning to build websites and software that I can use to grow my business.
+            </p>
+            <a class="button" href="#projects">View My Projects</a>
+        </section>
+
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+
+            <p>
+                My name is Haggai Mukwala, and I am a second year Computer Science student at
+                Mulungushi University. Apart from my studies, I run a business called H and L
+                Innovations, where I sell various types of goods and also provide services.
+                I am looking forward to acquiring more skills from my programme which I can
+                integrate with my business and become a successful entrepreneur.
+            </p>
+        </section>
+
+
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+
+            <ul>
+                <li>Playing football</li>
+                <li>Playing video games</li>
+                <li>Listening to music</li>
+            </ul>
+
+            <h3>How I Can Improve</h3>
+
+            <ol>
+                <li>Practise football regularly to improve my fitness and skills.</li>
+                <li>Practise video games regularly to improve my gaming skills.</li>
+                <li>Listen to different types of music and learn about new artists.</li>
+            </ol>
+        </section>
+
+
+        <section id="learning" class="content-section">
+            <h2>My Learning Plan</h2>
+
+            <table>
+
+                <caption>My Weekly Web Development Learning Plan</caption>
+
+                <tr>
+                    <th>Day</th>
+                    <th>Topic</th>
+                    <th>Task</th>
+                </tr>
+
+                <tr>
+                    <td>Monday</td>
+                    <td>HTML</td>
+                    <td>Practise HTML structure and elements.</td>
+                </tr>
+
+                <tr>
+                    <td>Tuesday</td>
+                    <td>CSS</td>
+                    <td>Practise colours, fonts and layouts.</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td>JavaScript</td>
+                    <td>Learn variables and functions.</td>
+                </tr>
+
+                <tr>
+                    <td>Thursday</td>
+                    <td>Web Design</td>
+                    <td>Practise creating attractive web pages.</td>
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td>Practice</td>
+                    <td>Build a small website.</td>
+                </tr>
+
+            </table>
+
+            <!-- Feature: Study hours calculator -->
+            <form id="hours-form" class="calculator" novalidate>
+                <h3>Study Hours Calculator</h3>
+
+                <label for="hours-per-day">Planned hours per day:</label>
+                <input type="text" id="hours-per-day" name="hours-per-day" inputmode="decimal">
+
+                <label for="days-per-week">Days per week (1 to 7):</label>
+                <input type="text" id="days-per-week" name="days-per-week" inputmode="numeric">
+
+                <button type="submit">Calculate</button>
+                <p id="hours-result" class="feedback" role="status"></p>
+            </form>
+        </section>
+
+
+        <section id="projects" class="content-section">
+            <h2>Projects and Skills</h2>
+
+            <div class="project-list">
+                <article class="project-card">
+                    <h3>HTML Structure</h3>
+                    <p>I learned to build a page with headers, navigation, sections, tables, lists and forms.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>CSS Styling</h3>
+                    <p>I learned to style layouts with colours, fonts, spacing and the box model.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>JavaScript Interaction</h3>
+                    <p>I learned to validate forms, handle events and update the page without reloading.</p>
+                </article>
+            </div>
+        </section>
+
+
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+
+            <!-- Feature: Gallery viewer (js/script.js shows one figure at a time
+                 and adds the Previous / Next buttons and counter) -->
+            <div class="photo-gallery">
+
+                <figure>
+                    <img src="images/photo1.jpg.jpg" alt="Calm and Composed">
+                    <figcaption>Calm and Composed.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/photo2.jpg.jpg" alt="Fresh trim">
+                    <figcaption>Fresh Trim.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/photo3.jpg.jpg" alt="CEO">
+                    <figcaption>C.E.O.</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+
+            <h3>My Introduction Video</h3>
+
+            <video controls preload="metadata">
+                <source src="videos/intro.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+            <p>
+                This video introduces myself, my program and a web development
+                skill I hope to learn.
+            </p>
+
+
+            <h3>My Audio</h3>
+
+            <audio controls preload="metadata">
+                <source src="videos/voice.mp3.m4a" type="audio/mp4">
+                Your browser does not support audio.
+            </audio>
+
+            <p>
+                In this recording I introduce myself and what I am learning at the moment.
+            </p>
+        </section>
+
+
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+
+            <p id="demo-note"><strong>Browser demonstration only &mdash; no message is sent.</strong></p>
+
+            <form id="contact-form" action="#" novalidate>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span id="name-error" class="error-text"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="email-error" class="error-text"></span>
+
+                <label for="topic">Topic:</label>
+
+                <select id="topic" name="topic">
+                    <option value="web">Web Development</option>
+                    <option value="programming">Programming</option>
+                    <option value="general">General</option>
+                </select>
+
+                <label for="message">Message:</label>
+
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span id="message-error" class="error-text"></span>
+
+                <button type="submit">Preview</button>
+                <button type="reset">Clear</button>
+
+                <p id="form-feedback" class="feedback" role="status"></p>
+
+            </form>
+
+            <div id="preview" hidden>
+                <h3>Preview (validated locally)</h3>
+                <p><strong>Name:</strong> <span id="preview-name"></span></p>
+                <p><strong>Email:</strong> <span id="preview-email"></span></p>
+                <p><strong>Message:</strong> <span id="preview-message"></span></p>
+            </div>
+        </section>
+
+
+        <section id="resources" class="content-section">
+            <h2>Learn Web Development</h2>
+
+            <p>
+                Visit this useful resource to learn more about web development:
+            </p>
+
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development"
+               target="_blank" rel="noopener">
+                Learn Web Development on MDN
+            </a>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Haggai Mukwala</p>
+        <p><a href="https://github.com/hmukwala26-tech/my-personal-website" target="_blank" rel="noopener">View Source on GitHub</a></p>
+    </footer>
+
+</body>
+
+</html>

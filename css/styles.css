@@ -1,0 +1,454 @@
+/* ===== THEME COLOURS (light is the default; dark is set by the theme switch) ===== */
+
+:root {
+    --bg: #f2f4f7;
+    --surface: #ffffff;
+    --form-bg: #f8f9ff;
+    --text: #222222;
+    --heading: #182848;
+    --accent: #4b6cb7;
+    --accent-dark: #182848;
+    --border: #cccccc;
+    --table-border: #999999;
+    --input-border: #aaaaaa;
+    --input-bg: #ffffff;
+    --nav-bg: #222222;
+    --link: #182848;
+    --button-bg: #182848;
+    --button-hover: #4b6cb7;
+    --error: #b00020;
+    --success: #146c2e;
+    --focus: #ffb703;
+}
+
+:root[data-theme="dark"] {
+    --bg: #121212;
+    --surface: #1e1e1e;
+    --form-bg: #252b3a;
+    --text: #eeeeee;
+    --heading: #a9bff5;
+    --accent: #6f8fe0;
+    --accent-dark: #2c3e75;
+    --border: #3a3a3a;
+    --table-border: #555555;
+    --input-border: #6b7280;
+    --input-bg: #14181f;
+    --nav-bg: #0b0b0b;
+    --link: #a9bff5;
+    --button-bg: #4b6cb7;
+    --button-hover: #3a56a0;
+    --error: #ff8a80;
+    --success: #7ee2a0;
+}
+
+
+/* ===== BASE ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* Visible keyboard focus for every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+    background: linear-gradient(135deg, #182848, #4b6cb7);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+#theme-toggle {
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 2px solid white;
+    margin-top: 10px;
+}
+
+#theme-toggle:hover {
+    background-color: white;
+    color: #182848;
+}
+
+
+/* ===== NAVIGATION ===== */
+
+nav {
+    background-color: var(--nav-bg);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px;
+    display: inline-block;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #4b6cb7;
+    border-radius: 5px;
+}
+
+
+/* ===== MAIN LAYOUT ===== */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* ===== SECTIONS ===== */
+
+.content-section {
+    background-color: var(--surface);
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.content-section h2 {
+    color: var(--heading);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+}
+
+.content-section h3 {
+    color: var(--heading);
+}
+
+/* Introductory area */
+.hero {
+    text-align: center;
+    padding: 40px 25px;
+    border-left: 6px solid var(--accent);
+}
+
+.hero h2 {
+    border-bottom: none;
+    font-size: 2rem;
+}
+
+/* Call-to-action link styled as a button (class selector) */
+.content-section a.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    background-color: var(--button-bg);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.content-section a.button:hover {
+    background-color: var(--button-hover);
+}
+
+
+/* ===== TABLE ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    border: 1px solid var(--table-border);
+    padding: 12px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background-color: var(--accent-dark);
+    color: white;
+}
+
+
+/* ===== PROJECTS ===== */
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--form-bg);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 15px 20px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+
+/* ===== PHOTOS (gallery viewer) ===== */
+
+figure {
+    margin: 0;
+}
+
+.gallery-viewer {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 8px;
+}
+
+#photo-counter {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+/* ===== MEDIA ===== */
+
+video {
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+audio {
+    width: 100%;
+    max-width: 600px;
+}
+
+
+/* ===== FORMS ===== */
+
+form {
+    background-color: var(--form-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Fields that failed validation (set by script.js) */
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border: 2px solid var(--error);
+}
+
+.error-text {
+    display: block;
+    color: var(--error);
+    font-size: 0.9rem;
+    min-height: 1.2em;
+}
+
+.feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.feedback.error {
+    color: var(--error);
+}
+
+.feedback.success {
+    color: var(--success);
+}
+
+/* Validated preview box */
+#preview {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: var(--form-bg);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+#preview[hidden] {
+    display: none;
+}
+
+#preview h3 {
+    margin-top: 0;
+}
+
+/* Calculator sits inside the Learning Plan section */
+.calculator {
+    margin-top: 25px;
+}
+
+
+/* ===== BUTTONS ===== */
+
+button {
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+button:disabled {
+    background-color: #6b7280;
+    cursor: not-allowed;
+}
+
+
+/* ===== LINKS ===== */
+
+.content-section a {
+    color: var(--link);
+    font-weight: bold;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background-color: var(--nav-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #cfe0ff;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .content-section {
+        padding: 18px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    /* Big, easy-to-tap buttons on phones */
+    button,
+    .content-section a.button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .gallery-controls {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+
+/* Respect visitors who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
